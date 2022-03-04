@@ -1,0 +1,43 @@
+{
+  "config": {
+    "url": "http://127.0.0.1/",
+    "wc": 0,
+    "addr": null,
+    "wallet": "0:52d2072498e8387715709921f180eff968620b2b9fabf5308a68086a31e72034",
+    "pubkey": "0xeb5656235bc5f5892d2d261e2e428b441f13421b92772e054cfe0d2a12aa232d",
+    "abi_path": null,
+    "keys_path": "secret.json",
+    "retries": 5,
+    "timeout": 40000,
+    "message_processing_timeout": 40000,
+    "out_of_sync_threshold": 15,
+    "is_json": false,
+    "depool_fee": 0.5,
+    "lifetime": 60,
+    "no_answer": true,
+    "balance_in_tons": false,
+    "local_run": false,
+    "async_call": false,
+    "endpoints": [
+      "http://0.0.0.0/",
+      "http://127.0.0.1/",
+      "http://localhost/"
+    ]
+  },
+  "endpoints_map": {
+    "http://127.0.0.1/": [
+      "http://0.0.0.0/",
+      "http://127.0.0.1/",
+      "http://localhost/"
+    ],
+    "main.ton.dev": [
+      "https://main2.ton.dev",
+      "https://main3.ton.dev",
+      "https://main4.ton.dev"
+    ],
+    "net.ton.dev": [
+      "https://net1.ton.dev",
+      "https://net5.ton.dev"
+    ]
+  }
+}

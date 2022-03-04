@@ -1,0 +1,2 @@
+00:01:49 [ERROR] Contract execution was terminated with error: Unknown error, exit code: 60 (Contract has no fallback function but function ID is wrong).
+Tip: For more information about exit code check the contract source code or ask the contract developer

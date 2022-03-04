@@ -1,0 +1,2045 @@
+.version sol 0.57.3
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+ENDS
+ACCEPT
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro start
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 11
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $start_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	start_internal
+.type	start_internal, @function
+CALL $start_internal_macro$
+
+.macro start_internal_macro
+.loc App.sol, 21
+PUSHREF {
+	.blob x4d61696e206d656e75
+}
+PUSHREF {
+	.blob x43686f6f736520416374696f6e
+}
+PUSHREF {
+	.blob x537769746368206e6574776f726b
+}
+PUSHREF {
+	.blob x737769746368206e6574776f726b2068657265
+}
+PUSHINT 343466035
+TRIPLE
+PUSHREF {
+	.blob x5472616e73616374696f6e
+}
+PUSHREF {
+	.blob x73656e6420796f7572206d6f6e65792068657265
+}
+PUSHINT 1319929348
+TRIPLE
+PUSHREF {
+	.blob x42616c616e63655f6f665f616e6f746865725f70656f706c65
+}
+PUSHREF {
+	.blob x636865636b20616e792074657a6f732077616c6c65742062616c616e6365
+}
+PUSHINT 515186087
+TRIPLE
+PUSHREF {
+	.blob x4c6f67696e
+}
+PUSHREF {
+	.blob x6c6f67696e5f68657265
+}
+PUSHINT 1718152431
+TRIPLE
+PUSHINT 0
+NEWDICT
+PUSHINT 4
+PUSHCONT {
+	ROT
+	CALLREF {
+		UNTRIPLE
+		XCHG S2
+		NEWC
+		STREF
+		STREF
+		STU 32
+	}
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+CALLREF {
+	CALL $Menu_no_obj_select_macro$
+}
+.loc App.sol, 0
+
+.macro handleLoginMenu
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 29
+LDU 32
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $handleLoginMenu_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	handleLoginMenu_internal
+.type	handleLoginMenu_internal, @function
+CALL $handleLoginMenu_internal_macro$
+
+.macro handleLoginMenu_internal_macro
+.loc App.sol, 30
+DROP
+PUSHINT 1052745405
+PUSHREF {
+	.blob x456e74657220707269766174654b65793a
+}
+FALSE
+CALLREF {
+	CALL $Terminal_no_obj_input_macro$
+}
+.loc App.sol, 0
+
+.macro setPrivateKey
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 33
+LDREF
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $setPrivateKey_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setPrivateKey_internal
+.type	setPrivateKey_internal, @function
+CALL $setPrivateKey_internal_macro$
+
+.macro setPrivateKey_internal_macro
+.loc App.sol, 34
+SETGLOB 16
+.loc App.sol, 21
+PUSHREF {
+	.blob x4d61696e206d656e75
+}
+PUSHREF {
+	.blob x43686f6f736520416374696f6e
+}
+PUSHREF {
+	.blob x537769746368206e6574776f726b
+}
+PUSHREF {
+	.blob x737769746368206e6574776f726b2068657265
+}
+PUSHINT 343466035
+TRIPLE
+PUSHREF {
+	.blob x5472616e73616374696f6e
+}
+PUSHREF {
+	.blob x73656e6420796f7572206d6f6e65792068657265
+}
+PUSHINT 1319929348
+TRIPLE
+PUSHREF {
+	.blob x42616c616e63655f6f665f616e6f746865725f70656f706c65
+}
+PUSHREF {
+	.blob x636865636b20616e792074657a6f732077616c6c65742062616c616e6365
+}
+PUSHINT 515186087
+TRIPLE
+PUSHREF {
+	.blob x4c6f67696e
+}
+PUSHREF {
+	.blob x6c6f67696e5f68657265
+}
+PUSHINT 1718152431
+TRIPLE
+PUSHINT 0
+NEWDICT
+PUSHINT 4
+PUSHCONT {
+	ROT
+	CALLREF {
+		UNTRIPLE
+		XCHG S2
+		NEWC
+		STREF
+		STREF
+		STU 32
+	}
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+CALLREF {
+	CALL $Menu_no_obj_select_macro$
+}
+.loc App.sol, 0
+
+.macro handleMenuBalance
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 38
+LDU 32
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $handleMenuBalance_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	handleMenuBalance_internal
+.type	handleMenuBalance_internal, @function
+CALL $handleMenuBalance_internal_macro$
+
+.macro handleMenuBalance_internal_macro
+.loc App.sol, 39
+DROP
+PUSHINT 885358708
+PUSHREF {
+	.blob x456e746572207075626c69634b65793a
+}
+FALSE
+CALLREF {
+	CALL $Terminal_no_obj_input_macro$
+}
+.loc App.sol, 0
+
+.macro handleMenuTransaction
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 42
+LDU 32
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $handleMenuTransaction_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	handleMenuTransaction_internal
+.type	handleMenuTransaction_internal, @function
+CALL $handleMenuTransaction_internal_macro$
+
+.macro handleMenuTransaction_internal_macro
+.loc App.sol, 43
+DROP
+PUSHINT 1965953421
+PUSHREF {
+	.blob x456e746572207075626c69634b65793a
+}
+FALSE
+CALLREF {
+	CALL $Terminal_no_obj_input_macro$
+}
+.loc App.sol, 0
+
+.macro setToAddress
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 46
+LDREF
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $setToAddress_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setToAddress_internal
+.type	setToAddress_internal, @function
+CALL $setToAddress_internal_macro$
+
+.macro setToAddress_internal_macro
+.loc App.sol, 47
+SETGLOB 17
+.loc App.sol, 48
+PUSHINT 126179710
+PUSHREF {
+	.blob x456e74657220616d6f756e743a
+}
+FALSE
+CALLREF {
+	CALL $Terminal_no_obj_input_macro$
+}
+.loc App.sol, 0
+
+.macro transaction
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 51
+LDREF
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $transaction_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	transaction_internal
+.type	transaction_internal, @function
+CALL $transaction_internal_macro$
+
+.macro transaction_internal_macro
+.loc App.sol, 52
+PUSHREF {
+	.blob x436f6e74656e742d547970653a206170706c69636174696f6e2f782d7777772d666f726d2d75726c656e636f646564
+}
+PUSHINT 0
+NEWDICT
+.loc App.sol, 53
+OVER
+INC
+ROLLREV 3
+PUSHINT 32
+DICTUSETREF
+PAIR
+.loc App.sol, 54
+PUSHREF {
+	.blob x687474703a2f2f6c6f63616c686f73743a383038302f7472616e73616374696f6e
+}
+.loc App.sol, 55
+GETGLOB 16
+HASHCU
+PUSHREF {
+	.blob x2d31
+}
+HASHCU
+EQUAL
+PUSHCONT {
+	.loc App.sol, 56
+	PUSHINT 0
+	PUSHREF {
+		.blob x6c6f67696e206669727374
+	}
+	CALLREF {
+		CALL $Terminal_no_obj_print_macro$
+	}
+	.loc App.sol, 21
+	PUSHREF {
+		.blob x4d61696e206d656e75
+	}
+	PUSHREF {
+		.blob x43686f6f736520416374696f6e
+	}
+	PUSHREF {
+		.blob x537769746368206e6574776f726b
+	}
+	PUSHREF {
+		.blob x737769746368206e6574776f726b2068657265
+	}
+	PUSHINT 343466035
+	TRIPLE
+	PUSHREF {
+		.blob x5472616e73616374696f6e
+	}
+	PUSHREF {
+		.blob x73656e6420796f7572206d6f6e65792068657265
+	}
+	PUSHINT 1319929348
+	TRIPLE
+	PUSHREF {
+		.blob x42616c616e63655f6f665f616e6f746865725f70656f706c65
+	}
+	PUSHREF {
+		.blob x636865636b20616e792074657a6f732077616c6c65742062616c616e6365
+	}
+	PUSHINT 515186087
+	TRIPLE
+	PUSHREF {
+		.blob x4c6f67696e
+	}
+	PUSHREF {
+		.blob x6c6f67696e5f68657265
+	}
+	PUSHINT 1718152431
+	TRIPLE
+	PUSHINT 0
+	NEWDICT
+	PUSHINT 4
+	PUSHCONT {
+		ROT
+		CALLREF {
+			UNTRIPLE
+			XCHG S2
+			NEWC
+			STREF
+			STREF
+			STU 32
+		}
+		PUSH S2
+		INC
+		XCHG S3
+		ROT
+		PUSHINT 32
+		DICTUSETB
+	}
+	REPEAT
+	PAIR
+	CALLREF {
+		CALL $Menu_no_obj_select_macro$
+	}
+}
+PUSHCONT {
+	.loc App.sol, 60
+	PUSHREF {
+		.blob x707269766174656b65793d
+	}
+	GETGLOB 16
+	CALLREF {
+		CALL $concatenateStrings_macro$
+	}
+	PUSHREF {
+		.blob x266164726573733d
+	}
+	CALLREF {
+		CALL $concatenateStrings_macro$
+	}
+	GETGLOB 17
+	CALLREF {
+		CALL $concatenateStrings_macro$
+	}
+	PUSHREF {
+		.blob x26616d6f756e743d
+	}
+	CALLREF {
+		CALL $concatenateStrings_macro$
+	}
+	PUSH S3
+	CALLREF {
+		CALL $concatenateStrings_macro$
+	}
+	.loc App.sol, 61
+	PUSHINT 1238304758
+	PUSH2 S2, S3
+	ROLL 3
+	CALLREF {
+		CALL $Network_no_obj_post_macro$
+	}
+}
+IFELSE
+.loc App.sol, 0
+BLKDROP 3
+
+.macro handleMenuSwitch
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 64
+LDU 32
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $handleMenuSwitch_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	handleMenuSwitch_internal
+.type	handleMenuSwitch_internal, @function
+CALL $handleMenuSwitch_internal_macro$
+
+.macro handleMenuSwitch_internal_macro
+.loc App.sol, 65
+DROP
+PUSHINT 0
+PUSHREF {
+	.blob x43757272656e74204e6574776f726b3d
+}
+GETGLOB 14
+CALLREF {
+	CALL $concatenateStrings_macro$
+}
+CALLREF {
+	CALL $Terminal_no_obj_print_macro$
+}
+.loc App.sol, 66
+PUSHREF {
+	.blob x6d656e7520666f72206368616e6765206e6574776f726b
+}
+PUSHREF {
+	.blob x43686f6f736520416374696f6e
+}
+PUSHREF {
+	.blob x6d61696e6e6574
+}
+DUP
+PUSHINT 1612796842
+TRIPLE
+PUSHREF {
+	.blob x68616e677a686f756e6574
+}
+DUP
+PUSHINT 2063987470
+TRIPLE
+PUSHINT 0
+NEWDICT
+PUSHINT 2
+PUSHCONT {
+	ROT
+	CALLREF {
+		UNTRIPLE
+		XCHG S2
+		NEWC
+		STREF
+		STREF
+		STU 32
+	}
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+CALLREF {
+	CALL $Menu_no_obj_select_macro$
+}
+.loc App.sol, 0
+
+.macro setNetworkHangzhounet
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 72
+LDU 32
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $setNetworkHangzhounet_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setNetworkHangzhounet_internal
+.type	setNetworkHangzhounet_internal, @function
+CALL $setNetworkHangzhounet_internal_macro$
+
+.macro setNetworkHangzhounet_internal_macro
+.loc App.sol, 73
+DROP
+PUSHINT 0
+PUSHREF {
+	.blob x537769746368656420746f2068616e677a686f756e6574
+}
+CALLREF {
+	CALL $Terminal_no_obj_print_macro$
+}
+.loc App.sol, 74
+PUSHREF {
+	.blob x68616e677a686f756e6574
+}
+SETGLOB 14
+.loc App.sol, 21
+PUSHREF {
+	.blob x4d61696e206d656e75
+}
+PUSHREF {
+	.blob x43686f6f736520416374696f6e
+}
+PUSHREF {
+	.blob x537769746368206e6574776f726b
+}
+PUSHREF {
+	.blob x737769746368206e6574776f726b2068657265
+}
+PUSHINT 343466035
+TRIPLE
+PUSHREF {
+	.blob x5472616e73616374696f6e
+}
+PUSHREF {
+	.blob x73656e6420796f7572206d6f6e65792068657265
+}
+PUSHINT 1319929348
+TRIPLE
+PUSHREF {
+	.blob x42616c616e63655f6f665f616e6f746865725f70656f706c65
+}
+PUSHREF {
+	.blob x636865636b20616e792074657a6f732077616c6c65742062616c616e6365
+}
+PUSHINT 515186087
+TRIPLE
+PUSHREF {
+	.blob x4c6f67696e
+}
+PUSHREF {
+	.blob x6c6f67696e5f68657265
+}
+PUSHINT 1718152431
+TRIPLE
+PUSHINT 0
+NEWDICT
+PUSHINT 4
+PUSHCONT {
+	ROT
+	CALLREF {
+		UNTRIPLE
+		XCHG S2
+		NEWC
+		STREF
+		STREF
+		STU 32
+	}
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+CALLREF {
+	CALL $Menu_no_obj_select_macro$
+}
+.loc App.sol, 0
+
+.macro setNetworkMainnet
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 77
+LDU 32
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $setNetworkMainnet_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setNetworkMainnet_internal
+.type	setNetworkMainnet_internal, @function
+CALL $setNetworkMainnet_internal_macro$
+
+.macro setNetworkMainnet_internal_macro
+.loc App.sol, 78
+DROP
+PUSHINT 0
+PUSHREF {
+	.blob x537769746368656420746f206d61696e6e657420
+}
+CALLREF {
+	CALL $Terminal_no_obj_print_macro$
+}
+.loc App.sol, 79
+PUSHREF {
+	.blob x6d61696e6e6574
+}
+SETGLOB 14
+.loc App.sol, 21
+PUSHREF {
+	.blob x4d61696e206d656e75
+}
+PUSHREF {
+	.blob x43686f6f736520416374696f6e
+}
+PUSHREF {
+	.blob x537769746368206e6574776f726b
+}
+PUSHREF {
+	.blob x737769746368206e6574776f726b2068657265
+}
+PUSHINT 343466035
+TRIPLE
+PUSHREF {
+	.blob x5472616e73616374696f6e
+}
+PUSHREF {
+	.blob x73656e6420796f7572206d6f6e65792068657265
+}
+PUSHINT 1319929348
+TRIPLE
+PUSHREF {
+	.blob x42616c616e63655f6f665f616e6f746865725f70656f706c65
+}
+PUSHREF {
+	.blob x636865636b20616e792074657a6f732077616c6c65742062616c616e6365
+}
+PUSHINT 515186087
+TRIPLE
+PUSHREF {
+	.blob x4c6f67696e
+}
+PUSHREF {
+	.blob x6c6f67696e5f68657265
+}
+PUSHINT 1718152431
+TRIPLE
+PUSHINT 0
+NEWDICT
+PUSHINT 4
+PUSHCONT {
+	ROT
+	CALLREF {
+		UNTRIPLE
+		XCHG S2
+		NEWC
+		STREF
+		STREF
+		STU 32
+	}
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+CALLREF {
+	CALL $Menu_no_obj_select_macro$
+}
+.loc App.sol, 0
+
+.macro getBalance
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 84
+LDREF
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $getBalance_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	getBalance_internal
+.type	getBalance_internal, @function
+CALL $getBalance_internal_macro$
+
+.macro getBalance_internal_macro
+.loc App.sol, 85
+PUSHINT 0
+OVER
+CALLREF {
+	CALL $Terminal_no_obj_print_macro$
+}
+.loc App.sol, 87
+PUSHREF {
+	.blob x68747470733a2f2f
+}
+GETGLOB 14
+CALLREF {
+	CALL $concatenateStrings_macro$
+}
+PUSHREF {
+	.blob x2e736d61727470792e696f2f636861696e732f6d61696e2f626c6f636b732f686561642f636f6e746578742f636f6e7472616374732f
+}
+CALLREF {
+	CALL $concatenateStrings_macro$
+}
+SWAP
+CALLREF {
+	CALL $concatenateStrings_macro$
+}
+PUSHREF {
+	.blob x2f62616c616e6365
+}
+CALLREF {
+	CALL $concatenateStrings_macro$
+}
+.loc App.sol, 88
+PUSHINT 0
+OVER
+CALLREF {
+	CALL $Terminal_no_obj_print_macro$
+}
+.loc App.sol, 89
+PUSHINT 1238304758
+SWAP
+PUSHINT 0
+NEWDICT
+PAIR
+CALLREF {
+	CALL $Network_no_obj_get_macro$
+}
+.loc App.sol, 0
+
+.macro setResponse
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 92
+LDI 32
+LDU 32
+LDDICT
+ROTREV
+PAIR
+SWAP
+LDREF
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $setResponse_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setResponse_internal
+.type	setResponse_internal, @function
+CALL $setResponse_internal_macro$
+
+.macro setResponse_internal_macro
+.loc App.sol, 93
+ROT
+PUSHINT 200
+EQUAL
+THROWIFNOT 101
+.loc App.sol, 95
+SWAP
+SECOND
+PUSHINT 0
+NULL
+PUSHCONT {
+	PUSH2 S1, S2
+	PUSHINT 32
+	DICTUGETREF
+	NULLSWAPIFNOT
+	DROP
+	DUP
+	POP S2
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc App.sol, 96
+	PUSHINT 0
+	OVER
+	CALLREF {
+		CALL $Terminal_no_obj_print_macro$
+	}
+	.loc App.sol, 0
+	OVER
+	INC
+	POP S2
+}
+WHILE
+BLKDROP 3
+.loc App.sol, 99
+PUSHINT 0
+SWAP
+CALLREF {
+	CALL $Terminal_no_obj_print_macro$
+}
+.loc App.sol, 21
+PUSHREF {
+	.blob x4d61696e206d656e75
+}
+PUSHREF {
+	.blob x43686f6f736520416374696f6e
+}
+PUSHREF {
+	.blob x537769746368206e6574776f726b
+}
+PUSHREF {
+	.blob x737769746368206e6574776f726b2068657265
+}
+PUSHINT 343466035
+TRIPLE
+PUSHREF {
+	.blob x5472616e73616374696f6e
+}
+PUSHREF {
+	.blob x73656e6420796f7572206d6f6e65792068657265
+}
+PUSHINT 1319929348
+TRIPLE
+PUSHREF {
+	.blob x42616c616e63655f6f665f616e6f746865725f70656f706c65
+}
+PUSHREF {
+	.blob x636865636b20616e792074657a6f732077616c6c65742062616c616e6365
+}
+PUSHINT 515186087
+TRIPLE
+PUSHREF {
+	.blob x4c6f67696e
+}
+PUSHREF {
+	.blob x6c6f67696e5f68657265
+}
+PUSHINT 1718152431
+TRIPLE
+PUSHINT 0
+NEWDICT
+PUSHINT 4
+PUSHCONT {
+	ROT
+	CALLREF {
+		UNTRIPLE
+		XCHG S2
+		NEWC
+		STREF
+		STREF
+		STU 32
+	}
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+CALLREF {
+	CALL $Menu_no_obj_select_macro$
+}
+.loc App.sol, 0
+
+.macro getRequiredInterfaces
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 104
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $getRequiredInterfaces_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHSLICE x00000000000000000000000036190b42a_
+	STSLICER
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getRequiredInterfaces_internal
+.type	getRequiredInterfaces_internal, @function
+CALL $getRequiredInterfaces_internal_macro$
+
+.macro getRequiredInterfaces_internal_macro
+.loc App.sol, 105
+PUSHINT 102920479623692208579952775324235789036928051927957195500612702430095365822702
+PUSHINT 61327837143279038880828163389518064523935669597243029312953519799871119370467
+PUSHINT 0
+NEWDICT
+PUSHINT 2
+PUSHCONT {
+	ROT
+	NEWC
+	STU 256
+	PUSH S2
+	INC
+	XCHG S3
+	ROT
+	PUSHINT 32
+	DICTUSETB
+}
+REPEAT
+PAIR
+.loc App.sol, 0
+
+.macro getDebotInfo
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc App.sol, 108
+ENDS
+.loc App.sol, 0
+CALLREF {
+	CALL $getDebotInfo_internal_macro$
+}
+PUSH S10
+PUSHCONT {
+	PUSH S12
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 11, 0
+	NEWC
+	STSLICECONST x00000deb
+	STREF
+	STREF
+	STREF
+	ROLLREV 7
+	NEWC
+	STREF
+	STREF
+	STSLICE
+	STREF
+	ROLLREV 3
+	NEWC
+	STREF
+	STREF
+	STREF
+	STBREFR
+	STBREFR
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	BLKDROP 10
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getDebotInfo_internal
+.type	getDebotInfo_internal, @function
+CALL $getDebotInfo_internal_macro$
+
+.macro getDebotInfo_internal_macro
+.loc App.sol, 111
+PUSHREF {
+	.blob x54657a6f732077616c6c6574
+}
+.loc App.sol, 112
+PUSHREF {
+	.blob x302e312e30
+}
+.loc App.sol, 113
+PUSHREF {
+	.blob x556e6b6e6f776e20427261696e
+}
+.loc App.sol, 114
+PUSHREF {
+	.blob x54657a6f732077616c6c6574
+}
+.loc App.sol, 115
+PUSHREF {
+	.blob x556e6b6e6f776e20427261696e
+}
+.loc App.sol, 116
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+.loc App.sol, 117
+PUSHREF {
+	.blob x48656c6c6f2c20497420697320612057616c6c6574
+}
+.loc App.sol, 118
+PUSHREF {
+	.blob x656e
+}
+.loc App.sol, 119
+GETGLOB 11
+DUP
+ISNULL
+THROWIF 63
+.loc App.sol, 120
+PUSHREF {
+	.blob x646174613a696d6167652f706e673b6261736536342c6956424f5277304b47676f414141414e535568455567414141426741414141594341594141414467647a33344141414142484e4353565149434167496641686b6941414141416c7753466c7a4141414170674141414b59423358332f4f41414141426c305256683055
+	.cell {
+		.blob x32396d64486468636d5541643364334c6d6c7561334e6a5958426c4c6d39795a35767550426f4141414e43535552425645694a745a5a5062427446464d5a2f4d3775625864746462317853467965696c426170795356553868384f6f46616f6f4653716969684956497051424b6369364b456739513648396b6f7649486f43
+		.cell {
+			.blob x4956514a4a434b4531454e466a6e416763615347433672456e784277413034547834337432466e764441666a6b4e6962786748786e576232652f753939326265653774436130305946736666656b46592b6e557a46746a57304c72766a5258724344494161504c6c57306e484c3053735a74566f614639386d4c7278337064
+			.cell {
+				.blob x684f714c74595048436861685a6359594f374b7650467876526c3558507031734e336164576944315a4171443658594b31622f647645354957727954743275644c4665647763312b396b4c702b766262706f44682b36546b6c784265416939544c307461655770646d5a7a514472793041634f2b6a51313252796f6871716f
+				.cell {
+					.blob x596f6f385244774a72552b71586b6a57746669385878743538426451757751733971432f61664c77437738746e516271594150736778453153364633454149587578326f51464b6d3069684d734f463731644859782b66334e4e443638676843753159496f655050514e3170475241426b4a364275733936437574525a4d79
+					.cell {
+						.blob x64546c2b547675695257316d336e3065446c30765250634579737164586e2b6a7351507372484d717547655845615934596b34777857635935562f397363714f4d4f5655467468617479547938517971775a2b6b4455524b6f4d57784e4b7232456571564b63544e4f616a714b6f42674f45323855347464516c3570356277
+						.cell {
+							.blob x43773742577175615a537a41506c776a6c6974684a7470337054496d537151527262325a3850484769674434525a754e58364a596a36776a374f3454464c62434f2f4d6e2f6d38522b6836725953556233656b6f6b525936662f59756b41724e3937396a63572b562f5338673065542f4e33564e336b54715762513432386d
+							.cell {
+								.blob x392f386b30502f31614968463336506363456c3645684f6341554372584b5a5858575333584b643276632f54524247394f35454c4331374d6d57756244326e4b68554b5a6132364261322b4433502b342f4d4e4346776735396f57566559686b7a674e2f4a44523864654b426f4437592b6c6a456a475a30736f7358565476
+								.cell {
+									.blob x62633652486972723272654e79314f586436704a73512b67716a6b38565746596d487277427a572f6e2b754d504669527748423249376968386369484678496b642f334f6d6b357443445631742b326e4e75357378787044464e782b68754e685654332f7a4d447a38757358433364646148426a3147486a2f417330386677
+									.cell {
+										.blob x5453374b74314842546d794e323976647741772b2f7762774c564f4a337541443177692f64554837516569363650667975526a34496b3969732b68676c66626b62665233636e5a6d3763686c55574c64776d707274436f6858344855746c4f63516a4c5943752b667a474a483251524b765033554e7a3862576b31714d786a
+										.cell {
+											.blob x47544f4d54685a336b76674c4935417a46666f3337395541414141415355564f524b35435949493d
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.loc App.sol, 0
+
+.macro getDebotOptions
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc .solc_imports/Debot.sol, 43
+ENDS
+.loc .solc_imports/Debot.sol, 0
+CALLREF {
+	CALL $getDebotOptions_internal_macro$
+}
+PUSH S4
+PUSHCONT {
+	PUSH S6
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 5, 0
+	NEWC
+	STSLICECONST xa259a30a
+	STU 8
+	STREF
+	STREF
+	STSLICE
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	BLKDROP 4
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getDebotOptions_internal
+.type	getDebotOptions_internal, @function
+CALL $getDebotOptions_internal_macro$
+
+.macro getDebotOptions_internal_macro
+.loc .solc_imports/Debot.sol, 43
+PUSHINT 0
+.loc .solc_imports/Debot.sol, 44
+GETGLOB 11
+ISNULL
+PUSHCONT {
+	PUSHREF {
+		.blob x
+	}
+}
+PUSHCONT {
+	GETGLOB 11
+	DUP
+	ISNULL
+	THROWIF 63
+}
+IFELSE
+.loc .solc_imports/Debot.sol, 45
+GETGLOB 12
+ISNULL
+PUSHCONT {
+	PUSHREF {
+		.blob x
+	}
+}
+PUSHCONT {
+	GETGLOB 12
+	DUP
+	ISNULL
+	THROWIF 63
+}
+IFELSE
+.loc .solc_imports/Debot.sol, 46
+GETGLOB 13
+ISNULL
+PUSHCONT {
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+}
+PUSHCONT {
+	GETGLOB 13
+	DUP
+	ISNULL
+	THROWIF 63
+}
+IFELSE
+.loc .solc_imports/Debot.sol, 47
+GETGLOB 10
+POP S4
+.loc .solc_imports/Debot.sol, 0
+
+.macro setABI
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc .solc_imports/Debot.sol, 51
+LDREF
+ENDS
+.loc .solc_imports/Debot.sol, 0
+CALLREF {
+	CALL $setABI_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setABI_internal
+.type	setABI_internal, @function
+CALL $setABI_internal_macro$
+
+.macro setABI_internal_macro
+.loc .solc_imports/Debot.sol, 52
+GETGLOB 2
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+EQUAL
+THROWIFNOT 100
+.loc .solc_imports/Debot.sol, 53
+ACCEPT
+.loc .solc_imports/Debot.sol, 54
+GETGLOB 10
+PUSHINT 1
+OR
+SETGLOB 10
+.loc .solc_imports/Debot.sol, 55
+SETGLOB 11
+.loc .solc_imports/Debot.sol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDU 8
+LDI 1
+SWAP
+PUSHCONT {
+	LDREF
+}
+PUSHCONT {
+	NULL
+	SWAP
+}
+IFELSE
+LDI 1
+SWAP
+PUSHCONT {
+	LDREF
+}
+PUSHCONT {
+	NULL
+	SWAP
+}
+IFELSE
+LDI 1
+SWAP
+PUSHCONT {
+	LDMSGADDR
+}
+PUSHCONT {
+	NULL
+	SWAP
+}
+IFELSE
+LDREF
+LDREF
+ENDS
+CTOS
+LDREF
+LDREF
+LDREF
+ENDS
+SETGLOB 17
+SETGLOB 16
+SETGLOB 15
+SETGLOB 14
+SETGLOB 13
+SETGLOB 12
+SETGLOB 11
+SETGLOB 10
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 0
+	NULL
+	BLKPUSH 2, 0
+	PUSHREF {
+	}
+	BLKPUSH 3, 0
+	SETGLOB 17
+	SETGLOB 16
+	SETGLOB 15
+	SETGLOB 14
+	SETGLOB 13
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+	PUSHREF {
+		.blob x6d61696e6e6574
+	}
+	SETGLOB 14
+	PUSHREF {
+		.blob x
+	}
+	SETGLOB 15
+	PUSHREF {
+		.blob x2d31
+	}
+	SETGLOB 16
+	PUSHREF {
+		.blob x
+	}
+	SETGLOB 17
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 17
+GETGLOB 16
+GETGLOB 15
+GETGLOB 14
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STU 8
+SWAP
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	STSLICECONST 0
+}
+PUSHCONT {
+	SWAP
+	STSLICECONST 1
+	STREF
+}
+IFELSE
+SWAP
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	STSLICECONST 0
+}
+PUSHCONT {
+	SWAP
+	STSLICECONST 1
+	STREF
+}
+IFELSE
+SWAP
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	STSLICECONST 0
+}
+PUSHCONT {
+	SWAP
+	STSLICECONST 1
+	STSLICE
+}
+IFELSE
+STREF
+ROLLREV 3
+NEWC
+STREF
+STREF
+STREF
+STBREFR
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+PLDU 4
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHINT 512
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	SWAP
+	LDU 1 ; signatureSlice hashMsgSlice havePubkey msgSlice
+	SWAP
+	PUSHCONT {
+		LDU 256 ; signatureSlice hashMsgSlice pubkey msgSlice
+		XCHG S3
+		SWAP
+	}
+	PUSHCONT {
+		XCHG S2
+		GETGLOB 2
+	}
+	IFELSE
+	DUP
+	SETGLOB 5
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+PUSHCONT {
+	LDU 1 ; havePubkey msgSlice
+	SWAP
+	THROWIF 58
+}
+IFELSE
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; expireAt msgSlice
+SWAP
+NOW ; msgSlice expireAt now
+GREATER ; msgSlice expireAt>now
+THROWIFNOT 57
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.globl	Menu_with_obj_select
+.type	Menu_with_obj_select, @function
+CALL $Menu_with_obj_select_macro$
+
+.macro Menu_with_obj_select_macro
+.loc ../Menu/Menu.sol, 22
+SWAP
+PUSH S2
+PUSHREFSLICE {
+	.blob x6270d60d269f675119724bc1efa511d40c11e6e51902ee2c6690626d92ce12b02da41cc4b400000000000000000000000000002337b217
+}
+NEWC
+STSLICE
+STREF
+STREF
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Menu/Menu.sol, 0
+
+.globl	Menu_no_obj_select
+.type	Menu_no_obj_select, @function
+CALL $Menu_no_obj_select_macro$
+
+.macro Menu_no_obj_select_macro
+.loc ../Menu/Menu.sol, 22
+XCHG S2
+PUSHREFSLICE {
+	.blob x6270d60d269f675119724bc1efa511d40c11e6e51902ee2c6690626d92ce12b02da41cc4b400000000000000000000000000002337b217
+}
+NEWC
+STSLICE
+STREF
+STREF
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Menu/Menu.sol, 0
+
+.globl	Network_with_obj_get
+.type	Network_with_obj_get, @function
+CALL $Network_with_obj_get_macro$
+
+.macro Network_with_obj_get_macro
+.loc ../Network/Network.sol, 17
+SWAP
+PUSH S2
+PUSHREFSLICE {
+	.blob x6270f1c576ac426e1f2213543e041fd57a7d040848c4fde063c9408897a970316c771cc4b400000000000000000000000000005856cfea
+}
+NEWC
+STSLICE
+STU 32
+STREF
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Network/Network.sol, 0
+
+.globl	Network_no_obj_get
+.type	Network_no_obj_get, @function
+CALL $Network_no_obj_get_macro$
+
+.macro Network_no_obj_get_macro
+.loc ../Network/Network.sol, 17
+XCHG S2
+PUSHREFSLICE {
+	.blob x6270f1c576ac426e1f2213543e041fd57a7d040848c4fde063c9408897a970316c771cc4b400000000000000000000000000005856cfea
+}
+NEWC
+STSLICE
+STU 32
+STREF
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Network/Network.sol, 0
+
+.globl	Network_with_obj_post
+.type	Network_with_obj_post, @function
+CALL $Network_with_obj_post_macro$
+
+.macro Network_with_obj_post_macro
+.loc ../Network/Network.sol, 22
+XCHG S2
+PUSH S3
+PUSHREFSLICE {
+	.blob x6270f1c576ac426e1f2213543e041fd57a7d040848c4fde063c9408897a970316c771cc4b4000000000000000000000000000068d14d06
+}
+NEWC
+STSLICE
+STU 32
+STREF
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Network/Network.sol, 0
+
+.globl	Network_no_obj_post
+.type	Network_no_obj_post, @function
+CALL $Network_no_obj_post_macro$
+
+.macro Network_no_obj_post_macro
+.loc ../Network/Network.sol, 22
+REVERSE 4, 0
+PUSHREFSLICE {
+	.blob x6270f1c576ac426e1f2213543e041fd57a7d040848c4fde063c9408897a970316c771cc4b4000000000000000000000000000068d14d06
+}
+NEWC
+STSLICE
+STU 32
+STREF
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Network/Network.sol, 0
+
+.globl	Terminal_with_obj_input
+.type	Terminal_with_obj_input, @function
+CALL $Terminal_with_obj_input_macro$
+
+.macro Terminal_with_obj_input_macro
+.loc ../Terminal/Terminal.sol, 18
+SWAP
+PUSH S2
+PUSHREFSLICE {
+	.blob x6270c3cb29b1b37710c296dab6e65b05e2b22cc5b0c6432fe286458d5ba05dd094719cc4b400000000000000000000000000003a85fb37
+}
+NEWC
+STSLICE
+STU 32
+STREF
+STI 1
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Terminal/Terminal.sol, 0
+
+.globl	Terminal_no_obj_input
+.type	Terminal_no_obj_input, @function
+CALL $Terminal_no_obj_input_macro$
+
+.macro Terminal_no_obj_input_macro
+.loc ../Terminal/Terminal.sol, 18
+XCHG S2
+PUSHREFSLICE {
+	.blob x6270c3cb29b1b37710c296dab6e65b05e2b22cc5b0c6432fe286458d5ba05dd094719cc4b400000000000000000000000000003a85fb37
+}
+NEWC
+STSLICE
+STU 32
+STREF
+STI 1
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Terminal/Terminal.sol, 0
+
+.globl	Terminal_with_obj_print
+.type	Terminal_with_obj_print, @function
+CALL $Terminal_with_obj_print_macro$
+
+.macro Terminal_with_obj_print_macro
+.loc ../Terminal/Terminal.sol, 23
+OVER
+PUSHREFSLICE {
+	.blob x6270c3cb29b1b37710c296dab6e65b05e2b22cc5b0c6432fe286458d5ba05dd094719cc4b400000000000000000000000000006367cbed
+}
+NEWC
+STSLICE
+STU 32
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Terminal/Terminal.sol, 0
+
+.globl	Terminal_no_obj_print
+.type	Terminal_no_obj_print, @function
+CALL $Terminal_no_obj_print_macro$
+
+.macro Terminal_no_obj_print_macro
+.loc ../Terminal/Terminal.sol, 23
+SWAP
+PUSHREFSLICE {
+	.blob x6270c3cb29b1b37710c296dab6e65b05e2b22cc5b0c6432fe286458d5ba05dd094719cc4b400000000000000000000000000006367cbed
+}
+NEWC
+STSLICE
+STU 32
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../Terminal/Terminal.sol, 0
+
+.macro public_function_selector
+DUP
+PUSHINT 1965953421
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 235440503
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 3563
+		EQUAL
+		IFJMPREF {
+			CALL $getDebotInfo$
+		}
+		DUP
+		PUSHINT 94113135
+		EQUAL
+		IFJMPREF {
+			CALL $start$
+		}
+		DUP
+		PUSHINT 126179710
+		EQUAL
+		IFJMPREF {
+			CALL $transaction$
+		}
+		DUP
+		PUSHINT 235440503
+		EQUAL
+		IFJMPREF {
+			CALL $setABI$
+		}
+	}
+	DUP
+	PUSHINT 885358708
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 343466035
+		EQUAL
+		IFJMPREF {
+			CALL $handleMenuSwitch$
+		}
+		DUP
+		PUSHINT 515186087
+		EQUAL
+		IFJMPREF {
+			CALL $handleMenuBalance$
+		}
+		DUP
+		PUSHINT 576299786
+		EQUAL
+		IFJMPREF {
+			CALL $getDebotOptions$
+		}
+		DUP
+		PUSHINT 885358708
+		EQUAL
+		IFJMPREF {
+			CALL $getBalance$
+		}
+	}
+	DUP
+	PUSHINT 1482960138
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1052745405
+		EQUAL
+		IFJMPREF {
+			CALL $setPrivateKey$
+		}
+		DUP
+		PUSHINT 1238304758
+		EQUAL
+		IFJMPREF {
+			CALL $setResponse$
+		}
+		DUP
+		PUSHINT 1319929348
+		EQUAL
+		IFJMPREF {
+			CALL $handleMenuTransaction$
+		}
+		DUP
+		PUSHINT 1482960138
+		EQUAL
+		IFJMPREF {
+			CALL $getRequiredInterfaces$
+		}
+	}
+	DUP
+	PUSHINT 1965953421
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1612796842
+		EQUAL
+		IFJMPREF {
+			CALL $setNetworkMainnet$
+		}
+		DUP
+		PUSHINT 1718152431
+		EQUAL
+		IFJMPREF {
+			CALL $handleLoginMenu$
+		}
+		DUP
+		PUSHINT 1756716863
+		EQUAL
+		IFJMPREF {
+			CALL $constructor$
+		}
+		DUP
+		PUSHINT 1965953421
+		EQUAL
+		IFJMPREF {
+			CALL $setToAddress$
+		}
+	}
+}
+DUP
+PUSHINT 2063987470
+EQUAL
+IFJMPREF {
+	CALL $setNetworkHangzhounet$
+}
+

@@ -1,0 +1,19 @@
+{
+  "name": "tezos_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@taquito/signer": "^11.2.0",
+    "@taquito/taquito": "^11.2.0",
+    "@taquito/tezbridge-signer": "^11.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
