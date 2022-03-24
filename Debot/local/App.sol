@@ -1,7 +1,8 @@
-pragma ton-solidity >=0.40.0;
+pragma ton -solidity >=0.40.0;
 pragma AbiHeader expire;
 pragma AbiHeader time;
 pragma AbiHeader pubkey;
+
 import "https://raw.githubusercontent.com/tonlabs/debots/main/Debot.sol";
 import "../Terminal/Terminal.sol";
 import "../Network/Network.sol";
@@ -12,26 +13,33 @@ contract Example is Debot {
         _menu();
     }
 
-    string netName="mainnet";
-    string publicKey="";
-    string privateKey="-1";
-    string toAddress="";
+    string netName = "mainnet";
+    string publicKey = "";
+    string privateKey = "-1";
+    string toAddress = "";
 
     function _menu() private inline {
         Menu.select("Main menu", "Choose Action", [
             MenuItem("Login", "login_here", tvm.functionId(handleLoginMenu)),
             MenuItem("Balance_of_another_people", "check any tezos wallet balance", tvm.functionId(handleMenuBalance)),
             MenuItem("Transaction", "send your money here", tvm.functionId(handleMenuTransaction)),
+            MenuItem("Friends", "add friends and sent them moneyy", tvm.functionId(handleMenuFriends)),
             MenuItem("Switch network", "switch network here", tvm.functionId(handleMenuSwitch))
-        ]);
+            ]);
     }
-    
+
+    function getFriends() private
+    function handleMenuFriends(uint32 index) public {
+        Terminal.input(tvm.functionId(setPrivateKey), "Enter privateKey:", false);
+    }
+
+
     function handleLoginMenu(uint32 index) public {
         Terminal.input(tvm.functionId(setPrivateKey), "Enter privateKey:", false);
     }
 
     function setPrivateKey(string value) public {
-        privateKey=value;
+        privateKey = value;
         _menu();
     }
 
@@ -43,40 +51,42 @@ contract Example is Debot {
         Terminal.input(tvm.functionId(setToAddress), "Enter publicKey:", false);
     }
 
-    function setToAddress(string value) public{
-        toAddress=value;
+    function setToAddress(string value) public {
+        toAddress = value;
         Terminal.input(tvm.functionId(transaction), "Enter amount:", false);
     }
 
-    function transaction(string value) public{
+    function transaction(string value) public {
         string[] headers;
         headers.push("Content-Type: application/x-www-form-urlencoded");
-        string url = "http://localhost:8080/transaction";//Todo depends on net
-        if (privateKey=="-1"){
+        string url = "http://localhost:8080/transaction";
+        //Todo depends on net
+        if (privateKey == "-1") {
             Terminal.print(0, "login first");
             _menu();
         }
-        else{
-        string body = "privatekey="+privateKey+"&adress="+toAddress+"&amount="+value;
-        Network.post(tvm.functionId(setResponse), url, headers,body);}
+        else {
+            string body = "privatekey=" + privateKey + "&adress=" + toAddress + "&amount=" + value;
+            Network.post(tvm.functionId(setResponse), url, headers, body);}
     }
 
     function handleMenuSwitch(uint32 index) public {
-        Terminal.print(0, "Current Network="+netName);
+        Terminal.print(0, "Current Network=" + netName);
         Menu.select("menu for change network", "Choose Action", [
             MenuItem("hangzhounet", "hangzhounet", tvm.functionId(setNetworkHangzhounet)),
             MenuItem("mainnet", "mainnet", tvm.functionId(setNetworkMainnet))
-        ]);
+            ]);
     }
 
     function setNetworkHangzhounet(uint32 index) public {
         Terminal.print(0, "Switched to hangzhounet");
-        netName="hangzhounet";
+        netName = "hangzhounet";
         _menu();
     }
+
     function setNetworkMainnet(uint32 index) public {
         Terminal.print(0, "Switched to mainnet ");
-        netName="mainnet";
+        netName = "mainnet";
         _menu();
 
     }
@@ -84,7 +94,7 @@ contract Example is Debot {
     function getBalance(string value) public {
         Terminal.print(0, value);
         string[] headers;
-        string url = "https://"+netName+".smartpy.io/chains/main/blocks/head/context/contracts/"+value+"/balance";
+        string url = "https://" + netName + ".smartpy.io/chains/main/blocks/head/context/contracts/" + value + "/balance";
         Terminal.print(0, url);
         Network.get(tvm.functionId(setResponse), url, headers);
     }
@@ -92,8 +102,8 @@ contract Example is Debot {
     function setResponse(int32 statusCode, string[] retHeaders, string content) public {
         require(statusCode == 200, 101);
         // TODO: analyze headers.
-        for (string hdr: retHeaders) {
-            Terminal.print(0, hdr);
+        for (string hdr : retHeaders) {
+        Terminal.print(0, hdr);
         }
         // TODO: deserialize content from json to structure using Json interface.
         Terminal.print(0, content);
@@ -102,10 +112,10 @@ contract Example is Debot {
     }
 
     function getRequiredInterfaces() public view override returns (uint256[] interfaces) {
-        return [ Terminal.ID, Network.ID];
+        return [Terminal.ID, Network.ID];
     }
 
-    function getDebotInfo() public functionID(0xDEB) view override returns(
+    function getDebotInfo() public functionID(0xDEB) view override returns (
         string name, string version, string publisher, string key, string author,
         address support, string hello, string language, string dabi, bytes icon) {
         name = "Tezos wallet";
